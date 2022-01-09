@@ -1,4 +1,3 @@
-[Skip to the content.](#content)
 
 Welcome to Abindent’s Official Github Page
 ==========================================
