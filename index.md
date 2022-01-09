@@ -1,37 +1,34 @@
-## Welcome to GitHub Pages
+## Welcome to Abindent's Official Github Page
+Hello everybody this is our new github page where I am going to share you all the github websites I have made.
 
-You can use the [editor on GitHub](https://github.com/abindent/abindent.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+<p align="center">
+  <img max-width="100%" src="https://i.imgur.com/orfhf4u.png?1" />
+</p>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+# Abindent Official Github
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## 🚀 About Sinchan Maitra (abindent)
+I'm a a beginner developer for Python and Javascript...
 
-```markdown
-Syntax highlighted code block
+## 🕵️‍ Skills
+Javascript, HTML, CSS, Python...
 
-# Header 1
-## Header 2
-### Header 3
+## 🔗 Links
 
-- Bulleted
-- List
+- [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sinchan-maitra-22a303217/)
+- [![reddit](https://img.shields.io/reddit/subreddit-subscribers/Abindent?style=social)](https://reddit.com/r/Abindent)
+- [![discord](https://img.shields.io/discord/843750265554206740)](https://discord.com/invite/dFW3gG7gPy) 
+- [![youtube](https://img.shields.io/youtube/channel/subscribers/UCYCtnmYa44736S7GbfnbYoQ?style=social)](https://tiny.cc/DiscoHuge-YT)
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
-```
+So follow th list below for all the websites I ahve made using github pages
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/abindent/abindent.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+### WEBSITE LISTS
+1) Official Github Page - [click here to visit](https://abindent.github.io/)
+2) ChatBot Simple JS - [click here to visit](https://abindent.github.io/chatbot-simple-js/)
+3) Advancesource - [click here to visit](https://abindent.github.io/advancesource/)
+4) TextAnalyzer Docs - [click here to visit](https://abindent.github.io/textanalyzer/)
+5) Connections - [click here to visit](https://abindent.github.io/connections/)
+6) TextUtils - [click here to visit](https://abindent.github.io/TextUtils/)
