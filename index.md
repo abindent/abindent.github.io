@@ -27,14 +27,14 @@ So follow th list below for all the websites I ahve made using github pages
 
 ### WEBSITE LISTS
 1) Official Github Page - [click here to visit](https://abindent.github.io/)
-2) 
-3) ChatBot Simple JS - [click here to visit](https://abindent.github.io/chatbot-simple-js/)
-4) 
-5) Advancesource - [click here to visit](https://abindent.github.io/advancesource/)
-6) 
-7) TextAnalyzer Docs - [click here to visit](https://abindent.github.io/textanalyzer/)
-8) 
-9) Connections - [click here to visit](https://abindent.github.io/connections/)
-10) 
-11) TextUtils - [click here to visit](https://abindent.github.io/TextUtils/)
-12) 
+
+2) ChatBot Simple JS - [click here to visit](https://abindent.github.io/chatbot-simple-js/)
+
+3) Advancesource - [click here to visit](https://abindent.github.io/advancesource/)
+
+4) TextAnalyzer Docs - [click here to visit](https://abindent.github.io/textanalyzer/)
+ 
+5) Connections - [click here to visit](https://abindent.github.io/connections/)
+
+6) TextUtils - [click here to visit](https://abindent.github.io/TextUtils/)
+
