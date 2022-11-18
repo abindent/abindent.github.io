@@ -1,4 +1,3 @@
-
 Welcome to Abindent’s Official Github Page
 ==========================================
 
@@ -29,7 +28,7 @@ Javascript, HTML, CSS, Python…
 --------
 
 *   [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sinchan-maitra-22a303217/)
-*   [![reddit](https://img.shields.io/reddit/subreddit-subscribers/Abindent?style=social)](https://reddit.com/r/Abindent)
+*   [![reddit](https://img.shields.io/reddit/subreddit-subscribers/OpenSourceGame?style=social)](https://reddit.com/r/OpenSourceGame)
 *   [![discord](https://img.shields.io/discord/843750265554206740)](https://discord.com/invite/dFW3gG7gPy)
 *   [![youtube](https://img.shields.io/youtube/channel/subscribers/UCYCtnmYa44736S7GbfnbYoQ?style=social)](https://tiny.cc/DiscoHuge-YT)
 
@@ -37,7 +36,7 @@ So follow th list below for all the websites I have made using github pages
 
 ### WEBSITE LISTS
 
-1) Official Github Page - [click here to visit](https://abindent.github.io/)
+1) Official Github Page - [click here to visit](https://abindent.github.io/abindent)
 
 2) ChatBot Simple JS - [click here to visit](https://abindent.github.io/chatbot-simple-js/)
 
@@ -45,7 +44,7 @@ So follow th list below for all the websites I have made using github pages
 
 4) TextAnalyzer Docs - [click here to visit](https://abindent.github.io/textanalyzer/)
 
-5) Connections - [click here to visit](https://abindent.github.io/connections/)
+5) Our Network - [click here to visit](https://abindent.github.io/our-network/)
 
 6) TextUtils - [click here to visit](https://abindent.github.io/TextUtils/)
 
