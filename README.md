@@ -29,7 +29,7 @@ Javascript, HTML, CSS, Python…
 
 *   [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sinchan-maitra-22a303217/)
 *   [![reddit](https://img.shields.io/reddit/subreddit-subscribers/OpenSourceGame?style=social)](https://reddit.com/r/OpenSourceGame)
-*   [![discord](https://img.shields.io/discord/843750265554206740)](https://discord.com/invite/dFW3gG7gPy)
+*   [![discord](https://img.shields.io/discord/932264473408966656)](https://discord.io/OpenSourceGames)
 *   [![youtube](https://img.shields.io/youtube/channel/subscribers/UCYCtnmYa44736S7GbfnbYoQ?style=social)](https://tiny.cc/DiscoHuge-YT)
 
 So follow th list below for all the websites I have made using github pages
