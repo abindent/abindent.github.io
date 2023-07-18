@@ -42,10 +42,8 @@ So follow th list below for all the websites I have made using github pages
 
 3) Advancesource - [click here to visit](https://abindent.github.io/advancesource/)
 
-4) TextAnalyzer Docs - [click here to visit](https://abindent.github.io/textanalyzer/)
+4) Our Network - [click here to visit](https://abindent.github.io/our-network/)
 
-5) Our Network - [click here to visit](https://abindent.github.io/our-network/)
-
-6) TextUtils - [click here to visit](https://abindent.github.io/TextUtils/)
+5) TextUtils - [click here to visit](https://abindent.github.io/TextUtils/)
 
 Powered By [Jekyll Themes](https://jekyll-themes.com/).
