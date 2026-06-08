@@ -1,98 +1,1081 @@
 <!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="UTF-8">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Welcome to Abindent’s Official Github Page | abindent.github.io</title>
-<meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Welcome to Abindent’s Official Github Page" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="The official github page for abindent." />
-<meta property="og:description" content="The official github page for abindent." />
-<link rel="canonical" href="https://abindent.github.io/" />
-<meta property="og:url" content="https://abindent.github.io/" />
-<meta property="og:site_name" content="abindent.github.io" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Welcome to Abindent’s Official Github Page" />
-<script type="application/ld+json">
-{"description":"The official github page for abindent.","url":"https://abindent.github.io/","@type":"WebSite","headline":"Welcome to Abindent’s Official Github Page","name":"abindent.github.io","@context":"https://schema.org"}</script>
-<!-- End Jekyll SEO tag -->
+  <!-- SEO -->
+  <title>abindent — Sinchan Maitra</title>
+  <meta name="description" content="Sinchan Maitra (abindent) — Full Stack Developer. Building in public, shipping fast. Open Source · Cloud · Always Building.">
+  <meta property="og:title" content="abindent — Sinchan Maitra">
+  <meta property="og:description" content="Full Stack Developer in the Making. Open Source · Cloud · Always Building.">
+  <meta property="og:url" content="https://abindent.github.io/">
+  <meta property="og:site_name" content="abindent.github.io">
+  <meta name="twitter:card" content="summary">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#157878">
-    <link href='https://osourcegames.blogspot.com/favicon.ico' rel='icon' type='image/x-icon'/>
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="stylesheet" href="/assets/css/style.css?v=f6a831dbc5401bb11b49c5043e568de012eb5746">
-    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+  <!-- Favicon -->
+  <link rel="icon" href="https://github.com/abindent.png" type="image/png">
 
-<!-- Setup Google Analytics -->
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
 
+  <style>
+    /* ════════════════════════════════════
+       RESET & ROOT
+    ════════════════════════════════════ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    :root {
+      --bg:       #0D1117;
+      --bg-1:     #161B22;
+      --bg-2:     #21262D;
+      --pink:     #F85D7F;
+      --gold:     #F8D866;
+      --text:     #c9d1d9;
+      --muted:    #8b949e;
+      --border:   rgba(248, 93, 127, 0.14);
+      --border-2: rgba(255,255,255,0.06);
+      --glow:     rgba(248, 93, 127, 0.25);
+      --mono:     'JetBrains Mono', monospace;
+      --display:  'Syne', sans-serif;
+    }
 
-<!-- You can set your favicon here -->
-<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+    html { scroll-behavior: smooth; }
 
-<!-- end custom head snippets -->
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--mono);
+      min-height: 100vh;
+      overflow-x: hidden;
+      line-height: 1.7;
+    }
 
-  </head>
-  <body>
-    <a id="skip-to-content" href="#content">Skip to the content.</a>
+    a { color: inherit; text-decoration: none; }
 
-    <header class="page-header" role="banner">
-      <h1 class="project-name">Welcome to Abindent’s Official Github Page</h1>
-      <h2 class="project-tagline">The official page for abindent.</h2>
-      
-      
-    </header>
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--pink); border-radius: 3px; }
 
-    <main id="content" class="main-content" role="main">
-      <h2 id="welcome-to-abindents-official-github-page">Welcome to Abindent’s Official Github Page</h2>
-<p>Hello everybody this is our new official github page where I am going to share you all the github websites I have made.</p>
+    /* ════════════════════════════════════
+       BACKGROUND LAYERS
+    ════════════════════════════════════ */
+    .grid-bg {
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(248,93,127,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(248,93,127,0.025) 1px, transparent 1px);
+      background-size: 52px 52px;
+      pointer-events: none;
+      z-index: 0;
+    }
 
-<p align="center">
-  <img max-width="100%" src="https://i.imgur.com/orfhf4u.png?1" />
-</p>
+    .noise-bg {
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1;
+    }
 
-<h1 id="abindent-official-github">Abindent Official Github</h1>
+    /* ════════════════════════════════════
+       LAYOUT
+    ════════════════════════════════════ */
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 28px;
+      position: relative;
+      z-index: 2;
+    }
 
-<h2 id="-about-sinchan-maitra-abindent">🚀 About Sinchan Maitra (abindent)</h2>
-<p>I’m a a beginner developer for Python and Javascript…</p>
+    /* ════════════════════════════════════
+       NAV
+    ════════════════════════════════════ */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      padding: 14px 0;
+      background: rgba(13,17,23,0.82);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
 
-<h2 id="️-skills">🕵️‍ Skills</h2>
-<p>Javascript, HTML, CSS, Python…</p>
+    .nav-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
 
-<h2 id="-links">🔗 Links</h2>
+    .nav-logo {
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--pink);
+      letter-spacing: -0.01em;
+    }
+    .nav-logo .dim { color: var(--muted); font-weight: 400; }
 
-<ul>
-  <li><a href="https://www.linkedin.com/in/sinchan-maitra-22a303217/"><img src="https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&amp;logo=linkedin&amp;logoColor=white" alt="linkedin" /></a></li>
-  <li><a href="https://reddit.com/r/OpenSourceGame"><img src="https://img.shields.io/reddit/subreddit-subscribers/OpenSourceGame?logo=reddit&amp;style=for-the-badge" alt="reddit" /></a></li>
-  <li><a href="https://discord.com/invite/n3q3HYMnkV"><img src="https://img.shields.io/discord/932264473408966656?style=for-the-badge&amp;logo=discord" alt="discord" /></a></li>
-  <li><a href="https://tiny.cc/DiscoHuge-YT"><img src="https://img.shields.io/youtube/channel/subscribers/UCYCtnmYa44736S7GbfnbYoQ?style=for-the-badge&amp;logo=youtube" alt="youtube" /></a></li>
-</ul>
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
 
-<p>So follow th list below for all the websites I have made using github pages</p>
+    .nav-links a {
+      font-size: 12px;
+      color: var(--muted);
+      transition: color 0.2s;
+      letter-spacing: 0.03em;
+    }
+    .nav-links a:hover { color: var(--pink); }
 
-<h3 id="website-lists">WEBSITE LISTS</h3>
-      
-<p>1) Official Github Page - <a href="/abindent">click here to visit</a></p>
+    /* ════════════════════════════════════
+       HERO
+    ════════════════════════════════════ */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 110px 0 60px;
+    }
 
-<p>2) Advancesource - <a href="/advancesource/">click here to visit</a></p>
+    .terminal-window {
+      background: var(--bg-1);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,0.03),
+        0 24px 80px rgba(0,0,0,0.5),
+        0 0 80px rgba(248,93,127,0.06);
+      animation: fadeUp 0.9s ease both;
+    }
 
-<p>3) Onotes - <a href="https://github.com/abindent/onotebook">click here to visit</a></p>
+    .terminal-bar {
+      background: var(--bg-2);
+      padding: 13px 18px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      border-bottom: 1px solid var(--border);
+    }
 
-<p>4) TextAnalyser - <a href="https://textanalyserosc.netlify.app">click here to visit</a></p>
+    .tb-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+    .tb-dot.r { background: #FF5F56; }
+    .tb-dot.y { background: #FFBD2E; }
+    .tb-dot.g { background: #27C93F; }
 
-<p>5) Main Site - <a href="https://osourcegames.firebaseapp.com">click here to visit</a></p>
+    .tb-title {
+      font-size: 12px;
+      color: var(--muted);
+      margin: 0 auto;
+      letter-spacing: 0.02em;
+    }
 
+    .terminal-body { padding: 36px 40px 40px; }
 
+    .t-prompt {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    .t-prompt .u { color: var(--pink); }
+    .t-prompt .h { color: var(--gold); }
 
-      <footer class="site-footer">
-        
-        <span class="site-footer-credits">Powered By <a href="https://jekyll-themes.com/">Jekyll Themes</a>.</span>
-      </footer>
-    </main>
-  </body>
+    /* Hero name */
+    .hero-name {
+      font-family: var(--display);
+      font-size: clamp(52px, 11vw, 100px);
+      font-weight: 800;
+      color: #fff;
+      line-height: 0.95;
+      margin: 6px 0 20px;
+      letter-spacing: -0.03em;
+      position: relative;
+      display: inline-block;
+    }
+
+    .hero-name .bg-glow {
+      position: absolute;
+      inset: 0;
+      color: var(--pink);
+      filter: blur(28px);
+      opacity: 0.22;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    .hero-tag {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 28px;
+      line-height: 2;
+    }
+
+    .hero-tag .pk { color: var(--pink); }
+    .hero-tag .gd { color: var(--gold); }
+
+    #typed-text { color: var(--gold); }
+
+    .caret {
+      display: inline-block;
+      width: 2px;
+      height: 0.9em;
+      background: var(--pink);
+      vertical-align: middle;
+      margin-left: 2px;
+      animation: blink 1s step-end infinite;
+    }
+
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+    /* Status pills */
+    .status-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 32px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 5px 12px;
+      background: var(--bg-2);
+      border: 1px solid var(--border-2);
+      border-radius: 20px;
+      font-size: 11.5px;
+      color: var(--muted);
+    }
+
+    .pill-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .pill-dot.active { background: var(--gold); animation: breathe 2s ease-in-out infinite; }
+    .pill-dot.pink   { background: var(--pink); animation: breathe 2s ease-in-out infinite 0.4s; }
+    .pill-dot.dim    { background: var(--muted); }
+
+    @keyframes breathe { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(0.7)} }
+
+    /* Social links */
+    .social-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .slink {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 14px;
+      background: transparent;
+      border: 1px solid var(--border-2);
+      border-radius: 8px;
+      font-size: 12px;
+      font-family: var(--mono);
+      color: var(--muted);
+      transition: all 0.22s;
+    }
+
+    .slink:hover {
+      border-color: var(--pink);
+      color: var(--pink);
+      background: rgba(248,93,127,0.06);
+      box-shadow: 0 0 18px rgba(248,93,127,0.12);
+    }
+
+    .slink svg { width: 13px; height: 13px; fill: currentColor; flex-shrink: 0; }
+
+    .scroll-hint {
+      text-align: center;
+      margin-top: 40px;
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      animation: bounce 2.2s ease-in-out infinite;
+    }
+
+    @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(7px)} }
+
+    /* ════════════════════════════════════
+       SECTIONS
+    ════════════════════════════════════ */
+    section { padding: 72px 0; }
+
+    .section-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 11px;
+      color: var(--pink);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 10px;
+    }
+
+    .section-eyebrow::before { content: '//'; color: var(--muted); }
+
+    .section-title {
+      font-family: var(--display);
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 36px;
+      letter-spacing: -0.02em;
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, var(--pink) 0%, rgba(248,93,127,0.08) 60%, transparent 100%);
+      margin-bottom: 72px;
+      opacity: 0.35;
+    }
+
+    /* ════════════════════════════════════
+       WHOAMI
+    ════════════════════════════════════ */
+    .whoami-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--bg-1);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      border-color: rgba(248,93,127,0.35);
+      box-shadow: 0 0 36px rgba(248,93,127,0.06);
+    }
+
+    .yaml-pre {
+      font-family: var(--mono);
+      font-size: 12.5px;
+      line-height: 1.9;
+      white-space: pre;
+    }
+
+    .yk { color: var(--pink); }
+    .yv { color: var(--text); }
+    .ys { color: var(--gold); }
+    .ym { color: var(--muted); }
+    .yb { color: var(--muted); opacity: 0.45; }
+
+    .quote-card {
+      background: var(--bg-1);
+      border: 1px solid var(--border);
+      border-left: 2px solid var(--pink);
+      border-radius: 0 12px 12px 0;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .quote-mark {
+      font-family: var(--display);
+      font-size: 52px;
+      line-height: 0.8;
+      color: var(--pink);
+      opacity: 0.6;
+      margin-bottom: 12px;
+      font-weight: 800;
+    }
+
+    .quote-text {
+      font-size: 14px;
+      font-style: italic;
+      color: var(--muted);
+      line-height: 1.9;
+    }
+
+    .quote-text strong { color: var(--text); font-style: normal; }
+
+    .quote-sub {
+      margin-top: 20px;
+      font-size: 11.5px;
+      color: var(--pink);
+      letter-spacing: 0.04em;
+    }
+
+    /* ════════════════════════════════════
+       TECH STACK
+    ════════════════════════════════════ */
+    .stack-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .stack-card {
+      background: var(--bg-1);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 22px 24px;
+      transition: border-color 0.3s;
+    }
+
+    .stack-card:hover { border-color: rgba(248,93,127,0.3); }
+
+    .stack-label {
+      font-size: 10.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .tag-row { display: flex; flex-wrap: wrap; gap: 7px; }
+
+    .tech-tag {
+      padding: 3px 10px;
+      background: var(--bg-2);
+      border: 1px solid var(--border-2);
+      border-radius: 5px;
+      font-size: 12px;
+      color: var(--text);
+      font-family: var(--mono);
+      transition: all 0.2s;
+      cursor: default;
+    }
+
+    .tech-tag:hover { border-color: rgba(248,93,127,0.4); color: var(--pink); }
+    .tech-tag.learn { border-color: rgba(248,216,102,0.25); color: var(--gold); background: rgba(248,216,102,0.04); }
+
+    /* ════════════════════════════════════
+       PROJECTS
+    ════════════════════════════════════ */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .project-card {
+      background: var(--bg-1);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 26px 28px;
+      display: block;
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+
+    .project-card::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--pink), var(--gold));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.35s ease;
+    }
+
+    .project-card:hover {
+      border-color: rgba(248,93,127,0.35);
+      box-shadow: 0 10px 50px rgba(248,93,127,0.09);
+      transform: translateY(-4px);
+    }
+
+    .project-card:hover::after { transform: scaleX(1); }
+
+    .proj-icon { font-size: 26px; margin-bottom: 14px; display: block; }
+
+    .proj-name {
+      font-family: var(--display);
+      font-size: 19px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 4px;
+      letter-spacing: -0.02em;
+    }
+
+    .proj-tagline {
+      font-size: 12px;
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 12px;
+    }
+
+    .proj-desc {
+      font-size: 13px;
+      color: var(--text);
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+
+    .proj-stack { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
+
+    .proj-tag {
+      padding: 2px 8px;
+      background: rgba(248,93,127,0.07);
+      border: 1px solid rgba(248,93,127,0.18);
+      border-radius: 4px;
+      font-size: 11px;
+      color: var(--pink);
+    }
+
+    .proj-cta {
+      font-size: 12px;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 0.2s;
+    }
+
+    .project-card:hover .proj-cta { color: var(--pink); }
+
+    /* ════════════════════════════════════
+       GITHUB STATS
+    ════════════════════════════════════ */
+    .stats-imgs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .stats-imgs img {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      display: block;
+    }
+
+    .streak-wrap {
+      margin-top: 16px;
+      text-align: center;
+    }
+
+    .streak-wrap img {
+      width: 70%;
+      max-width: 500px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+    }
+
+    .activity-wrap {
+      margin-top: 16px;
+    }
+
+    .activity-wrap img {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+    }
+
+    /* ════════════════════════════════════
+       SITES LIST
+    ════════════════════════════════════ */
+    .sites-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(195px, 1fr));
+      gap: 12px;
+    }
+
+    .site-pill {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 18px;
+      background: var(--bg-1);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      text-decoration: none;
+      color: var(--text);
+      font-size: 13px;
+      transition: all 0.24s;
+    }
+
+    .site-pill:hover {
+      border-color: var(--pink);
+      color: var(--pink);
+      background: rgba(248,93,127,0.04);
+      transform: translateX(3px);
+    }
+
+    .site-num {
+      font-size: 11px;
+      color: var(--muted);
+      font-weight: 600;
+      min-width: 20px;
+    }
+
+    .site-arr {
+      margin-left: auto;
+      opacity: 0;
+      transition: opacity 0.2s;
+      font-size: 12px;
+    }
+
+    .site-pill:hover .site-arr { opacity: 1; }
+
+    /* ════════════════════════════════════
+       FOOTER
+    ════════════════════════════════════ */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 44px 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 2;
+    }
+
+    footer a { color: var(--pink); }
+    footer a:hover { text-decoration: underline; }
+
+    .footer-wave {
+      width: 100%;
+      display: block;
+      margin-bottom: 28px;
+    }
+
+    /* ════════════════════════════════════
+       ANIMATIONS
+    ════════════════════════════════════ */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ════════════════════════════════════
+       RESPONSIVE
+    ════════════════════════════════════ */
+    @media (max-width: 800px) {
+      .whoami-grid,
+      .stack-grid,
+      .projects-grid,
+      .stats-imgs { grid-template-columns: 1fr; }
+
+      .nav-links { display: none; }
+
+      .terminal-body { padding: 24px 22px 28px; }
+
+      .yaml-pre { font-size: 11px; white-space: pre-wrap; }
+
+      .streak-wrap img { width: 100%; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-name { font-size: 48px; }
+      .container { padding: 0 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grid-bg"></div>
+  <div class="noise-bg"></div>
+
+  <!-- ══ NAV ══════════════════════════ -->
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-logo" href="#"><span class="dim">~/</span>abindent</a>
+      <ul class="nav-links">
+        <li><a href="#whoami">whoami</a></li>
+        <li><a href="#stack">stack</a></li>
+        <li><a href="#projects">projects</a></li>
+        <li><a href="#stats">stats</a></li>
+        <li><a href="#sites">sites</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <!-- ══ HERO ══════════════════════ -->
+    <section class="hero">
+      <div class="terminal-window">
+        <div class="terminal-bar">
+          <span class="tb-dot r"></span>
+          <span class="tb-dot y"></span>
+          <span class="tb-dot g"></span>
+          <span class="tb-title">abindent@github.io — bash — 140×42</span>
+        </div>
+        <div class="terminal-body">
+
+          <div class="t-prompt">
+            <span class="u">abindent</span><span style="color:var(--muted)">@</span><span class="h">github.io</span><span style="color:var(--muted)">:~$ </span><span style="color:var(--text)">./hello.sh</span>
+          </div>
+
+          <h1 class="hero-name">
+            <span class="bg-glow" aria-hidden="true">ABINDENT</span>
+            ABINDENT
+          </h1>
+
+          <div class="hero-tag">
+            <span class="pk">Sinchan Maitra</span> &nbsp;·&nbsp;
+            <span id="typed-text">Full Stack Developer in the Making 🚀</span><span class="caret"></span>
+          </div>
+
+          <div class="status-row">
+            <div class="pill">
+              <span class="pill-dot active"></span>
+              building ONoteBook
+            </div>
+            <div class="pill">
+              <span class="pill-dot pink"></span>
+              digging into C++ &amp; Systems
+            </div>
+            <div class="pill">
+              <span class="pill-dot dim"></span>
+              between chapters — writing the next
+            </div>
+          </div>
+
+          <div class="social-row">
+            <!-- LinkedIn -->
+            <a class="slink" href="https://www.linkedin.com/in/sinchan-maitra-22a303217/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+            <!-- GitHub -->
+            <a class="slink" href="https://github.com/abindent" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              GitHub
+            </a>
+            <!-- Discord -->
+            <a class="slink" href="https://discord.io/OpenSourceGames" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057.1 18.08.11 18.1.133 18.115a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
+              Discord
+            </a>
+            <!-- Reddit -->
+            <a class="slink" href="https://www.reddit.com/r/OpenSourceGame/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>
+              Reddit
+            </a>
+            <!-- Instagram -->
+            <a class="slink" href="https://www.instagram.com/itz_abindent_xtreme/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              Instagram
+            </a>
+            <!-- Website -->
+            <a class="slink" href="https://osourcegames.firebaseapp.com" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm1 16.057v-3.057h2.994c-.059 1.143-.212 2.24-.456 3.279-.823-.12-1.674-.188-2.538-.222zm1.957 2.162c-.499 1.33-1.159 2.497-1.957 3.456v-3.62c.666.028 1.319.081 1.957.164zm-1.957-7.219v-3.015c.868-.034 1.721-.103 2.548-.224.238 1.027.389 2.111.446 3.239h-2.994zm0-5.014v-3.661c.806.969 1.471 2.15 1.971 3.496-.642.084-1.3.137-1.971.165zm2.703-3.267c1.237.496 2.354 1.228 3.29 2.146-.642.234-1.311.442-2.019.607-.344-.992-.775-1.91-1.271-2.753zm-7.241 13.56c-.244-1.039-.398-2.136-.456-3.279h2.994v3.057c-.865.034-1.714.102-2.538.222zm2.538 1.776v3.62c-.798-.959-1.458-2.126-1.957-3.456.638-.083 1.291-.136 1.957-.164zm-2.994-7.055c.057-1.128.207-2.212.446-3.239.827.121 1.68.19 2.548.224v3.015h-2.994zm1.024-5.179c.5-1.346 1.165-2.527 1.97-3.496v3.661c-.671-.028-1.329-.081-1.97-.165zm-2.005-.35c-.708-.165-1.377-.373-2.018-.607.937-.918 2.053-1.65 3.29-2.146-.496.844-.927 1.762-1.272 2.753zm-.549 1.918c-.264 1.151-.434 2.36-.492 3.611h-3.933c.165-1.658.739-3.197 1.617-4.518.88.361 1.816.67 2.808.907zm.009 9.262c-.988.236-1.92.542-2.797.9-.89-1.328-1.471-2.879-1.637-4.551h3.934c.058 1.265.231 2.488.5 3.651zm.553 1.917c.342.976.768 1.881 1.257 2.712-1.223-.49-2.326-1.211-3.256-2.115.636-.229 1.299-.435 1.999-.597zm9.924 0c.7.163 1.362.367 1.999.597-.931.903-2.034 1.625-3.257 2.116.489-.832.915-1.737 1.258-2.713zm.553-1.917c.27-1.163.442-2.386.501-3.651h3.934c-.167 1.672-.748 3.223-1.638 4.551-.877-.358-1.81-.664-2.797-.9zm.501-5.651c-.058-1.251-.229-2.46-.492-3.611.992-.237 1.929-.546 2.809-.907.877 1.321 1.451 2.86 1.616 4.518h-3.933z"/></svg>
+              Website
+            </a>
+          </div>
+
+        </div><!-- /terminal-body -->
+      </div><!-- /terminal-window -->
+
+      <div class="scroll-hint">▼&nbsp;&nbsp;scroll to explore</div>
+    </section>
+
+    <!-- ══ WHOAMI ══════════════════════ -->
+    <section id="whoami">
+      <div class="divider"></div>
+      <div class="section-eyebrow reveal">about</div>
+      <h2 class="section-title reveal">$ whoami</h2>
+
+      <div class="whoami-grid">
+        <div class="card reveal">
+          <pre class="yaml-pre"><span class="yb">╔══════════════════════════════════════╗</span>
+<span class="yb">║</span>                                      <span class="yb">║</span>
+<span class="yb">║</span>  <span class="yk">handle    </span> <span class="ym">:</span>  <span class="ys">abindent</span>              <span class="yb">║</span>
+<span class="yb">║</span>  <span class="yk">name      </span> <span class="ym">:</span>  <span class="yv">Sinchan Maitra</span>         <span class="yb">║</span>
+<span class="yb">║</span>  <span class="yk">status    </span> <span class="ym">:</span>  <span class="yv">between chapters,</span>      <span class="yb">║</span>
+<span class="yb">║</span>             <span class="yv">    writing the next one</span>  <span class="yb">║</span>
+<span class="yb">║</span>  <span class="yk">focus     </span> <span class="ym">:</span>  <span class="ys">Full Stack · Cloud</span>      <span class="yb">║</span>
+<span class="yb">║</span>               <span class="ys">Open Source</span>             <span class="yb">║</span>
+<span class="yb">║</span>  <span class="yk">building  </span> <span class="ym">:</span>  <span class="yv">ONoteBook</span>              <span class="yb">║</span>
+<span class="yb">║</span>  <span class="yk">digging   </span> <span class="ym">:</span>  <span class="yv">C++ | Systems</span>          <span class="yb">║</span>
+<span class="yb">║</span>                                      <span class="yb">║</span>
+<span class="yb">╚══════════════════════════════════════╝</span></pre>
+        </div>
+
+        <div class="quote-card reveal">
+          <div class="quote-mark">"</div>
+          <div class="quote-text">
+            I write code that <strong>(hopefully)</strong> doesn't break —
+            and when it does, I make sure I <strong>learn exactly why.</strong>
+          </div>
+          <div class="quote-sub">philosophy: Ship it. Break it. Learn why. Repeat.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ TECH STACK ══════════════════ -->
+    <section id="stack">
+      <div class="divider"></div>
+      <div class="section-eyebrow reveal">technologies</div>
+      <h2 class="section-title reveal">$ ls ./tech-stack</h2>
+
+      <div class="stack-grid">
+        <div class="stack-card reveal">
+          <div class="stack-label">— Frontend —</div>
+          <div class="tag-row">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Next.js</span>
+            <span class="tech-tag">Bootstrap</span>
+            <span class="tech-tag">Sass</span>
+          </div>
+        </div>
+        <div class="stack-card reveal">
+          <div class="stack-label">— Backend &amp; Database —</div>
+          <div class="tag-row">
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Express</span>
+            <span class="tech-tag">MongoDB</span>
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">Firebase</span>
+          </div>
+        </div>
+        <div class="stack-card reveal">
+          <div class="stack-label">— Tools &amp; Platforms —</div>
+          <div class="tag-row">
+            <span class="tech-tag">Git</span>
+            <span class="tech-tag">GitHub</span>
+            <span class="tech-tag">VSCode</span>
+            <span class="tech-tag">Vercel</span>
+          </div>
+        </div>
+        <div class="stack-card reveal">
+          <div class="stack-label">— Currently Learning —</div>
+          <div class="tag-row">
+            <span class="tech-tag learn">C++</span>
+            <span class="tech-tag learn">Python</span>
+            <span class="tech-tag learn">TypeScript</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ PROJECTS ════════════════════ -->
+    <section id="projects">
+      <div class="divider"></div>
+      <div class="section-eyebrow reveal">work</div>
+      <h2 class="section-title reveal">$ cat ./featured-projects</h2>
+
+      <div class="projects-grid">
+        <a class="project-card reveal" href="https://github.com/abindent/ONoteBook" target="_blank" rel="noopener">
+          <span class="proj-icon">🗒️</span>
+          <div class="proj-name">ONoteBook</div>
+          <div class="proj-tagline">Save &amp; sync your notes — wherever you are</div>
+          <div class="proj-desc">Cloud-first note-taking service. Designed for speed, built for reliability.</div>
+          <div class="proj-stack">
+            <span class="proj-tag">MongoDB</span>
+            <span class="proj-tag">Express</span>
+            <span class="proj-tag">React</span>
+            <span class="proj-tag">Node.js</span>
+            <span class="proj-tag">Firebase</span>
+          </div>
+          <div class="proj-cta">→ View Repository</div>
+        </a>
+
+        <a class="project-card reveal" href="https://github.com/abindent/Nextcord-Utility-Bot" target="_blank" rel="noopener">
+          <span class="proj-icon">🤖</span>
+          <div class="proj-name">Nextcord Utility Bot</div>
+          <div class="proj-tagline">Your Discord server's new best friend</div>
+          <div class="proj-desc">Feature-packed utility bot with moderation, fun, and productivity commands.</div>
+          <div class="proj-stack">
+            <span class="proj-tag">Python</span>
+            <span class="proj-tag">Nextcord</span>
+          </div>
+          <div class="proj-cta">→ View Repository</div>
+        </a>
+
+        <a class="project-card reveal" href="https://github.com/abindent/textanalyser" target="_blank" rel="noopener">
+          <span class="proj-icon">📝</span>
+          <div class="proj-name">TextAnalyser</div>
+          <div class="proj-tagline">Words, dissected.</div>
+          <div class="proj-desc">Analyse, summarise, and transform text intelligently in the browser.</div>
+          <div class="proj-stack">
+            <span class="proj-tag">Next.js</span>
+            <span class="proj-tag">React</span>
+          </div>
+          <div class="proj-cta">→ View Repository</div>
+        </a>
+
+        <a class="project-card reveal" href="https://github.com/abindent/textanalysis-tool" target="_blank" rel="noopener">
+          <span class="proj-icon">🔬</span>
+          <div class="proj-name">TextAnalysis Tool</div>
+          <div class="proj-tagline">Open tools for open builders</div>
+          <div class="proj-desc">A lightning-fast TypeScript library for text analysis and manipulation. Simple cleanup to deep linguistic insights.</div>
+          <div class="proj-stack">
+            <span class="proj-tag">TypeScript</span>
+            <span class="proj-tag">Node.js</span>
+          </div>
+          <div class="proj-cta">→ View Repository</div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ══ GITHUB STATS ════════════════ -->
+    <section id="stats">
+      <div class="divider"></div>
+      <div class="section-eyebrow reveal">metrics</div>
+      <h2 class="section-title reveal">$ git log --all --stat</h2>
+
+      <div class="stats-imgs reveal">
+        <img
+          src="https://github-readme-stats-eosin-psi-94.vercel.app/api?username=abindent&show_icons=true&count_private=true&theme=react&hide_border=true&bg_color=161B22&title_color=F85D7F&icon_color=F8D866&text_color=c9d1d9&ring_color=F85D7F"
+          alt="GitHub Stats"
+          loading="lazy"
+        />
+        <img
+          src="https://github-readme-stats-eosin-psi-94.vercel.app/api/top-langs/?username=abindent&langs_count=8&layout=compact&theme=react&hide_border=true&bg_color=161B22&title_color=F85D7F&icon_color=F8D866&text_color=c9d1d9&hide=Jupyter%20Notebook"
+          alt="Top Languages"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="streak-wrap reveal" style="margin-top:16px;">
+        <img
+          src="https://github-readme-streak-stats-henna-omega.vercel.app?user=abindent&theme=dark&hide_border=true&background=161B22&ring=F85D7F&fire=F8D866&currStreakLabel=F85D7F&sideLabels=c9d1d9&dates=888888&sideNums=F8D866"
+          alt="Streak Stats"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="activity-wrap reveal" style="margin-top:16px;">
+        <img
+          src="https://github-readme-activity-graph.vercel.app/graph/?username=abindent&bg_color=161B22&color=F8D866&line=F85D7F&point=FFFFFF&hide_border=true&area=true&area_color=F85D7F"
+          alt="Activity Graph"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="activity-wrap reveal" style="margin-top:16px;">
+        <img
+          src="https://personal-trophy.vercel.app/api?username=abindent&theme=radical&no-frame=true&no-bg=true&column=7&margin-w=10"
+          alt="GitHub Trophies"
+          loading="lazy"
+        />
+      </div>
+    </section>
+
+    <!-- ══ SITES ═══════════════════════ -->
+    <section id="sites">
+      <div class="divider"></div>
+      <div class="section-eyebrow reveal">pages</div>
+      <h2 class="section-title reveal">$ ls ./github-pages</h2>
+
+      <div class="sites-grid">
+        <a class="site-pill reveal" href="https://abindent.github.io/abindent" target="_blank" rel="noopener">
+          <span class="site-num">01</span>
+          Official Github Page
+          <span class="site-arr">→</span>
+        </a>
+        <a class="site-pill reveal" href="https://abindent.github.io/advancesource/" target="_blank" rel="noopener">
+          <span class="site-num">02</span>
+          Advancesource
+          <span class="site-arr">→</span>
+        </a>
+        <a class="site-pill reveal" href="https://github.com/abindent/onotebook" target="_blank" rel="noopener">
+          <span class="site-num">03</span>
+          ONotes
+          <span class="site-arr">→</span>
+        </a>
+        <a class="site-pill reveal" href="https://textanalyserosc.netlify.app" target="_blank" rel="noopener">
+          <span class="site-num">04</span>
+          TextAnalyser
+          <span class="site-arr">→</span>
+        </a>
+        <a class="site-pill reveal" href="https://osourcegames.firebaseapp.com" target="_blank" rel="noopener">
+          <span class="site-num">05</span>
+          Main Site
+          <span class="site-arr">→</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ══ FOOTER ═══════════════════════ -->
+    <footer>
+      <p>
+        Made with ❤️ and too much ☕ — by
+        <a href="https://github.com/abindent" target="_blank">abindent</a>
+      </p>
+      <p style="margin-top:6px;font-size:11px;">
+        <a href="https://pages.github.com" target="_blank">GitHub Pages</a>
+        &nbsp;·&nbsp;
+        <a href="https://github.com/abindent" target="_blank">github.com/abindent</a>
+        &nbsp;·&nbsp;
+        <span style="color:var(--muted)">abindent.github.io</span>
+      </p>
+    </footer>
+
+  </div><!-- /container -->
+
+  <script>
+    /* ── Scroll reveal ── */
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    /* ── Typing animation ── */
+    const phrases = [
+      'Full Stack Developer in the Making 🚀',
+      'Open Source | Cloud | Always Building',
+      'Turning coffee into commits ☕',
+      'If it compiles, ship it.',
+      'Ship it. Break it. Learn why. Repeat.'
+    ];
+    let pIdx = 0, cIdx = 0, del = false;
+    const el = document.getElementById('typed-text');
+
+    function tick() {
+      const phrase = phrases[pIdx];
+      if (!del) {
+        el.textContent = phrase.slice(0, ++cIdx);
+        if (cIdx === phrase.length) { del = true; setTimeout(tick, 2200); return; }
+      } else {
+        el.textContent = phrase.slice(0, --cIdx);
+        if (cIdx === 0) { del = false; pIdx = (pIdx + 1) % phrases.length; }
+      }
+      setTimeout(tick, del ? 38 : 72);
+    }
+
+    setTimeout(tick, 1200);
+
+    /* ── Stagger reveal delays ── */
+    document.querySelectorAll('.reveal').forEach((el, i) => {
+      el.style.transitionDelay = `${(i % 4) * 0.08}s`;
+    });
+  </script>
+
+</body>
 </html>
